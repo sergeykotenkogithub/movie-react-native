@@ -1,28 +1,49 @@
 {
-  "name": "movie-react-antive",
-  "version": "1.0.0",
-  "main": "node_modules/expo/AppEntry.js",
-  "scripts": {
-    "start": "expo start",
-    "android": "expo start --android",
-    "ios": "expo start --ios",
-    "web": "expo start --web"
-  },
-  "dependencies": {
-    "expo": "~47.0.3",
-    "expo-av": "^13.0.1",
-    "expo-blur": "^12.0.1",
-    "expo-image-picker": "^14.0.1",
-    "expo-linear-gradient": "^12.0.1",
-    "expo-screen-orientation": "^5.0.1",
-    "expo-secure-store": "^12.0.0",
-    "expo-splash-screen": "^0.17.4",
-    "expo-status-bar": "^1.4.2",
-    "react": "18.1.0",
-    "react-native": "0.70.5"
-  },
-  "devDependencies": {
-    "@babel/core": "^7.12.9"
-  },
-  "private": true
+	"name": "movie-react-antive",
+	"version": "1.0.0",
+	"main": "node_modules/expo/AppEntry.js",
+	"scripts": {
+		"start": "expo start",
+		"android": "expo start --android",
+		"android:dev": "expo start -c --android",
+		"dev": "expo start -c --android",
+		"ios": "expo start --ios",
+		"web": "expo start --web"
+	},
+	"dependencies": {
+		"@react-navigation/native": "^6.1.1",
+		"@react-navigation/native-stack": "^6.9.6",
+		"babel-plugin-inline-dotenv": "^1.7.0",
+		"babel-preset-expo": "^9.2.2",
+		"clsx": "^1.2.1",
+		"expo": "~47.0.3",
+		"expo-av": "~13.0.2",
+		"expo-blur": "^12.0.1",
+		"expo-image-picker": "~14.0.2",
+		"expo-linear-gradient": "~12.0.1",
+		"expo-screen-orientation": "^5.0.1",
+		"expo-secure-store": "^12.0.0",
+		"expo-splash-screen": "~0.17.5",
+		"expo-status-bar": "^1.4.2",
+		"nativewind": "^2.0.11",
+		"react": "18.1.0",
+		"react-hook-form": "^7.40.0",
+		"react-native": "0.70.5",
+		"react-native-reanimated": "^2.12.0",
+		"react-native-safe-area-context": "4.4.1",
+		"react-native-screens": "~3.18.0"
+	},
+	"devDependencies": {
+		"@babel/core": "^7.12.9",
+		"@trivago/prettier-plugin-sort-imports": "^3.4.0",
+		"@tsconfig/react-native": "^2.0.2",
+		"@types/expo": "^33.0.1",
+		"@types/react": "^18.0.26",
+		"@types/react-native": "^0.70.8",
+		"babel-plugin-root-import": "^6.6.0",
+		"prettier": "^2.7.1",
+		"tailwindcss": "^3.2.4",
+		"typescript": "^4.8.4"
+	},
+	"private": true
 }
