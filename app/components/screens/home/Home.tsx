@@ -9,17 +9,18 @@ import { useTypedNavigation } from '@/hooks/useTypedNavigation'
 import Auth from '../auth/Auth'
 
 const Home: FC = () => {
-	const { navigate } = useTypedNavigation()
+	// const { navigate } = useTypedNavigation()
 	return (
 		<View className='mt-10'>
-			{/* <Text className='text-white'>Home</Text> */}
+			<Text className='text-white'>Home</Text>
 			{/* <TextInput /> */}
 			{/* <TextInput /> */}
 			{/* <Pressable onPress={() => navigate('Auth')}>
 				<Text style={{ color: 'white' }}>Go to login</Text>
 			</Pressable> */}
-			<Auth />
-			<Button />
+			{/* <Auth /> */}
+
+			{/* <Button /> */}
 		</View>
 	)
 }

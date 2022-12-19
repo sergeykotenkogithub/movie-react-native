@@ -1,19 +1,22 @@
 import { StatusBar } from 'expo-status-bar'
-import { useState } from 'react'
-import { StyleSheet, Text, View } from 'react-native'
-import { SafeAreaProvider, SafeAreaView } from 'react-native-safe-area-context'
+import { SafeAreaProvider } from 'react-native-safe-area-context'
 
-import { Header } from '@/components/Header'
+import Toast from '@/components/ui/Toast'
+
+import AuthProvider from '@/providers/auth/AuthProvider'
 
 import Navigation from '@/navigation/Navigation'
 
 export default function App() {
 	return (
 		<>
-			<SafeAreaProvider>
-				<Navigation />
-			</SafeAreaProvider>
+			<AuthProvider>
+				<SafeAreaProvider>
+					<Navigation />
+				</SafeAreaProvider>
+			</AuthProvider>
 			<StatusBar style='light' />
+			<Toast />
 		</>
 	)
 }

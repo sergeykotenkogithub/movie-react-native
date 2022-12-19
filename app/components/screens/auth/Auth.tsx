@@ -2,9 +2,7 @@ import { FC, useState } from 'react'
 import { SubmitHandler, useForm } from 'react-hook-form'
 import { Pressable, Text, TextInput, View } from 'react-native'
 
-import { Button, Loader } from '@/components/ui'
-import DismissKeyboard from '@/components/ui/form-elements/field/DismissKeyboard'
-import Field from '@/components/ui/form-elements/field/Field'
+import { Button, DismissKeyboard, Loader } from '@/components/ui'
 
 import { IAuthFormData } from '@/shared/types/auth.interface'
 
@@ -26,7 +24,7 @@ const Auth: FC = () => {
 		<DismissKeyboard className='bg-[#090909]'>
 			<View className='mx-2 items-center justify-center h-full'>
 				<View className='w-9/12'>
-					<Text className='text-cente text-white text-4xl font-bold mb-2.5'>
+					<Text className='text-center text-white text-4xl font-bold mb-2.5'>
 						{isReg ? 'Register' : 'Auth'}
 					</Text>
 					{isLoading ? (
