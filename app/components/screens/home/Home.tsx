@@ -2,26 +2,22 @@ import { useNavigation } from '@react-navigation/native'
 import { FC } from 'react'
 import { Pressable, Text, TextInput, View } from 'react-native'
 
+import { Layout, Loader } from '@/components/ui'
 import Button from '@/components/ui/button/Button'
 
 import { useTypedNavigation } from '@/hooks/useTypedNavigation'
 
 import Auth from '../auth/Auth'
 
-const Home: FC = () => {
-	// const { navigate } = useTypedNavigation()
-	return (
-		<View className='mt-10'>
-			<Text className='text-white'>Home</Text>
-			{/* <TextInput /> */}
-			{/* <TextInput /> */}
-			{/* <Pressable onPress={() => navigate('Auth')}>
-				<Text style={{ color: 'white' }}>Go to login</Text>
-			</Pressable> */}
-			{/* <Auth /> */}
+import Carousel from './carousel/Carousel'
+import { useGetAllMovies } from './useGetAllMovies'
 
-			{/* <Button /> */}
-		</View>
+const Home: FC = () => {
+	const { movies, isLoading } = useGetAllMovies()
+	return (
+		<Layout>
+			{isLoading ? <Loader /> : movies?.length && <Carousel movies={movies} />}
+		</Layout>
 	)
 }
 

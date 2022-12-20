@@ -4,7 +4,7 @@ import { Text, View } from 'react-native'
 const Favorites: FC = () => {
 	return (
 		<View>
-			<Text>Favorites</Text>
+			<Text className='text-white'>Favorites</Text>
 		</View>
 	)
 }
