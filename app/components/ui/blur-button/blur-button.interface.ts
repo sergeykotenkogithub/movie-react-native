@@ -1,10 +1,11 @@
-import { PressableProps } from 'react-native'
+import { PressableProps, ViewStyle } from 'react-native'
 
 import { TypeFeatherIconNames } from '@/shared/types/icon.types'
 
 export interface IBlurButton extends PressableProps {
-	className?: string
+	style?: ViewStyle
 	icon?: TypeFeatherIconNames
 	iconSize?: number
 	color?: string
+	isSmall?: boolean
 }
