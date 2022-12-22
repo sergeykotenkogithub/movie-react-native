@@ -7,11 +7,9 @@ import { IMovie } from '@/shared/types/movie.interface'
 
 import { getMediaSource } from '@/utils/getMediaSource'
 
-interface IMovieBackground {
-	movie: IMovie
-}
+import { IMovieComponent } from './movie-page.interface'
 
-const MovieBackground: FC<IMovieBackground> = ({ movie }) => {
+const MovieBackground: FC<IMovieComponent> = ({ movie }) => {
 	const { top } = useSafeAreaInsets()
 	return (
 		<Animated.View style={StyleSheet.absoluteFillObject}>
