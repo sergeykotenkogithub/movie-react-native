@@ -6,13 +6,17 @@ import { GenreList, Rating } from '@/components/ui'
 
 import { IMovie } from '@/shared/types/movie.interface'
 
-interface IMovieInfo {
-	movie: IMovie
-}
+import { IMovieComponent } from '../movie-page.interface'
+import { HEADER_HEIGHT, inputRange } from '../movie.constant'
 
-const MovieInfo: FC<IMovieInfo> = ({ movie }) => {
+const MovieInfo: FC<IMovieComponent> = ({ movie, y }) => {
+	const opacity = y.interpolate({
+		inputRange: [-HEADER_HEIGHT, 0, HEADER_HEIGHT / 2],
+		outputRange: [1, 1, 0]
+	})
+
 	return (
-		<Animated.View className='px-6 mb-3'>
+		<Animated.View className='px-6 mb-3' style={{ opacity }}>
 			<Text
 				className='text-5xl font-semibold text-[#F9FCFC] mb-2 pr-2'
 				numberOfLines={2}

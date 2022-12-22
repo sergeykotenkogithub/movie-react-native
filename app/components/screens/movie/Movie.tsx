@@ -1,5 +1,5 @@
-import { FC } from 'react'
-import { Text, View } from 'react-native'
+import { FC, useRef } from 'react'
+import { Animated, Text, View } from 'react-native'
 
 import { Layout, Loader } from '@/components/ui'
 
@@ -8,16 +8,23 @@ import MovieHeader from './MovieHeader'
 import MovieContent from './movie-content/MovieContent'
 import MovieInfo from './movie-content/MovieInfo'
 import { useMovie } from './useMovie'
+import { useUpdateCountOpened } from './useUpdateCountOpened'
 
 const Movie: FC = () => {
+	const y = useRef(new Animated.Value(0)).current
+
 	const { movie, isLoading } = useMovie()
+
+	useUpdateCountOpened()
+
 	if (isLoading) return <Loader />
 	if (!movie) return null
+
 	return (
 		<Layout style={{ paddingTop: 0 }}>
-			<MovieHeader movie={movie} />
-			<MovieBackground movie={movie} />
-			<MovieContent movie={movie} />
+			<MovieHeader movie={movie} y={y} />
+			<MovieBackground movie={movie} y={y} />
+			<MovieContent movie={movie} y={y} />
 		</Layout>
 	)
 }
