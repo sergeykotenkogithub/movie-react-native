@@ -25,20 +25,22 @@ const PrivateNavigation: FC = () => {
 			}}
 		>
 			{user ? (
-				routes.map(route =>
-					user.isAdmin || !route.isAdmin ? (
+				user.isAdmin ? (
+					routes.map(route => (
 						<Stack.Screen
 							key={route.name}
 							name={route.name}
 							component={route.component}
 						/>
-					) : (
+					))
+				) : (
+					userRoutes.map(route => (
 						<Stack.Screen
-							key='Screen404'
-							name='Screen404'
-							component={Screen404}
+							key={route.name}
+							name={route.name}
+							component={route.component}
 						/>
-					)
+					))
 				)
 			) : (
 				<Stack.Screen name='Auth' component={Auth} />

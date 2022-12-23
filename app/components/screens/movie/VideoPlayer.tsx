@@ -47,6 +47,7 @@ const VideoPlayer: FC<{ video: string }> = ({ video }) => {
 					shouldPlay
 					useNativeControls
 					resizeMode={ResizeMode.CONTAIN}
+					// videoHeight={}
 				/>
 			</View>
 		</>

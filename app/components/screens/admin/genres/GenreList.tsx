@@ -1,12 +1,12 @@
 import { FC } from 'react'
 import { Text, View } from 'react-native'
 
-const Admin: FC = () => {
+const GenreList: FC = () => {
 	return (
 		<View>
-			<Text className='text-white'>Admin</Text>
+			<Text>GenreList</Text>
 		</View>
 	)
 }
 
-export default Admin
+export default GenreList

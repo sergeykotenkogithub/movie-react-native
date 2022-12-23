@@ -1,12 +1,12 @@
 import { FC } from 'react'
 import { Text, View } from 'react-native'
 
-const Admin: FC = () => {
+const ActorList: FC = () => {
 	return (
 		<View>
-			<Text className='text-white'>Admin</Text>
+			<Text>ActorList</Text>
 		</View>
 	)
 }
 
-export default Admin
+export default ActorList
