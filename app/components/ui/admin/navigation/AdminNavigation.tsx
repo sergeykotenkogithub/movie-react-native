@@ -6,9 +6,11 @@ import Animated, { useAnimatedStyle, withSpring } from 'react-native-reanimated'
 
 import { useTypedNavigation } from '@/hooks/useTypedNavigation'
 
-import BlurButton from '../blur-button/BlurButton'
-import Heading from '../heading/Heading'
+import BlurButton from '../../blur-button/BlurButton'
+import Heading from '../../heading/Heading'
 
+// import BlurButton from '../blur-button/BlurButton'
+// import Heading from '../heading/Heading'
 import AdminNavItem from './AdminNavItem'
 import { navItems } from './admin-navigation.data'
 import HamburgerAnimation from './hamburger-animation/HamburgerAnimation'
