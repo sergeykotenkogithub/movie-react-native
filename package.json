@@ -22,6 +22,7 @@
 		"expo": "~47.0.3",
 		"expo-av": "~13.0.2",
 		"expo-blur": "~12.0.1",
+		"expo-checkbox": "~2.2.2",
 		"expo-image-picker": "~14.0.2",
 		"expo-linear-gradient": "~12.0.1",
 		"expo-screen-orientation": "^5.0.1",
