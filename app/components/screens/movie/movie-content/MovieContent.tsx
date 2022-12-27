@@ -1,10 +1,11 @@
 import { useScrollToTop } from '@react-navigation/native'
 import { FC, useRef } from 'react'
-import { Animated, ScrollView, Text, View } from 'react-native'
+import { Animated, ScrollView, View } from 'react-native'
 
-import VideoPlayer from '../VideoPlayer'
+import VideoPlayer from '@/components/screens/movie/VideoPlayer'
+import { HEADER_HEIGHT } from '@/components/screens/movie/movie.constant'
+
 import { IMovieComponent } from '../movie-page.interface'
-import { HEADER_HEIGHT } from '../movie.constant'
 
 import ActorCarousel from './ActorCarousel'
 import MovieInfo from './MovieInfo'

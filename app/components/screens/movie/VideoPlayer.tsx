@@ -1,7 +1,6 @@
-import { Audio, Video } from 'expo-av'
-import { ResizeMode } from 'expo-av/build/Video.types'
+import { Audio, ResizeMode, Video } from 'expo-av'
 import { FC, useEffect, useRef } from 'react'
-import { Text, View } from 'react-native'
+import { View } from 'react-native'
 
 import { Button } from '@/components/ui'
 
@@ -21,6 +20,7 @@ const VideoPlayer: FC<{ video: string }> = ({ video }) => {
 
 			await videoRef.current?.stopAsync()
 		}
+
 		let ignore = enableAudio()
 	}, [])
 
@@ -41,13 +41,11 @@ const VideoPlayer: FC<{ video: string }> = ({ video }) => {
 					ref={videoRef}
 					source={getMediaSource(video)}
 					style={{ height: 180 }}
-					// className='mb-5 w-full hidden h-full'
-					className='mb-52 w-full hidden h-full'
-					// className='mb-5 w-full hidden h-full min-h-full'
+					// className='mb-5 w-full hidden'
+					className='mb-5 w-full '
 					shouldPlay
 					useNativeControls
 					resizeMode={ResizeMode.CONTAIN}
-					// videoHeight={}
 				/>
 			</View>
 		</>

@@ -46,7 +46,7 @@ export const MovieService = {
 
 	async getById(_id: string) {
 		return await request<IMovieEditInput>({
-			url: getMoviesUrl(`/by-slug/${_id}`),
+			url: getMoviesUrl(`/${_id}`),
 			method: 'GET'
 		})
 	},

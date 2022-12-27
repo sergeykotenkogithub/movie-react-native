@@ -6,7 +6,6 @@ import {
 	useEffect,
 	useState
 } from 'react'
-import { Text, View } from 'react-native'
 
 import { getAccessToken, getUserFromStorage } from '@/services/auth/auth.helper'
 
@@ -18,7 +17,7 @@ let ignore = SplashScreen.preventAutoHideAsync()
 
 const AuthProvider: FC<PropsWithChildren> = ({ children }) => {
 	const [user, setUser] = useState<TypeUserState>(null)
-	// const [user, setUser] = useState<TypeUserState>({} as TypeUserState)
+
 	useEffect(() => {
 		let IsMounted = true
 		const checkAccessToken = async () => {

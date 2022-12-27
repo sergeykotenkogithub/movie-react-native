@@ -1,6 +1,6 @@
 import { useMutation, useQuery, useQueryClient } from '@tanstack/react-query'
 import { SubmitHandler, UseFormSetValue } from 'react-hook-form'
-import { Toast } from 'react-native-toast-message/lib/src/Toast'
+import Toast from 'react-native-toast-message'
 
 import { useTypedRoute } from '@/hooks/useTypedRoute'
 
@@ -12,7 +12,7 @@ export const useMovieEdit = (setValue: UseFormSetValue<IMovieEditInput>) => {
 	const { params } = useTypedRoute<'MovieEdit'>()
 	const movieId = params.id
 
-	const { isLoading } = useQuery(
+	const { isLoading, isSuccess } = useQuery(
 		['get movie', movieId],
 		() => MovieService.getById(movieId),
 		{
@@ -47,5 +47,5 @@ export const useMovieEdit = (setValue: UseFormSetValue<IMovieEditInput>) => {
 		await mutateAsync(data)
 	}
 
-	return { onSubmit, isLoading }
+	return { onSubmit, isLoading, isSuccess }
 }
