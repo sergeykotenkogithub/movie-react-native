@@ -18,7 +18,7 @@ const Genre: FC = () => {
 					// @ts-ignore
 					movies={movies}
 					title={genre.name}
-					description='Genre movies in excellent quality'
+					description={genre.description}
 					isBackButton
 				/>
 			) : (

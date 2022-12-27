@@ -25,7 +25,7 @@ export const useMovieEdit = (setValue: UseFormSetValue<IMovieEditInput>) => {
 		}
 	)
 
-	const { invalidateQueries } = useQueryClient()
+	const queryClient = useQueryClient()
 
 	const { mutateAsync } = useMutation(
 		['update movie'],
@@ -38,7 +38,7 @@ export const useMovieEdit = (setValue: UseFormSetValue<IMovieEditInput>) => {
 					text2: 'update was successful'
 				})
 
-				await invalidateQueries(['search movies'])
+				await queryClient.invalidateQueries(['search movies'])
 			}
 		}
 	)

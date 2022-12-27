@@ -25,7 +25,7 @@ export const useActorEdit = (setValue: UseFormSetValue<IActorEditInput>) => {
 		}
 	)
 
-	const { invalidateQueries } = useQueryClient()
+	const queryClient = useQueryClient()
 
 	const { mutateAsync } = useMutation(
 		['update actor'],
@@ -38,7 +38,7 @@ export const useActorEdit = (setValue: UseFormSetValue<IActorEditInput>) => {
 					text2: 'update was successful'
 				})
 
-				await invalidateQueries(['search actors'])
+				await queryClient.invalidateQueries(['search actors'])
 			}
 		}
 	)

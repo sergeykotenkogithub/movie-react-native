@@ -1,3 +1,6 @@
+import { default as SlugWrapper } from './form-elements/field/SlugWrapper'
+import { default as TextEditor } from './form-elements/text-editor/TextEditor'
+
 export { default as Loader } from './Loader'
 export { default as Button } from './button/Button'
 export { default as Heading } from './heading/Heading'
